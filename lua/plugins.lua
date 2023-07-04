@@ -8,10 +8,10 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
-  -- use {
-  -- 'svrana/neosolarized.nvim',
-  -- requires = { 'tjdevries/colorbuddy.nvim' }
-  -- }
+  --use {
+  --  'svrana/neosolarized.nvim',
+  --  requires = { 'tjdevries/colorbuddy.nvim' }
+  --}
   use 'nvim-lualine/lualine.nvim' -- Statusline
   use 'onsails/lspkind-nvim' -- vscode-like pictograms
   use 'hrsh7th/cmp-buffer' -- nvim-cmp source for buffer words
@@ -56,6 +56,7 @@ packer.startup(function(use)
 
   use 'prettier/vim-prettier'
 
+  use "MunifTanjim/prettier.nvim"
   -- Python lsp
   use {
     'HallerPatrick/py_lsp.nvim',

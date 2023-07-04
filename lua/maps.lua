@@ -25,7 +25,7 @@ keymap.set('n', 'ss', ':split<Return><C-w>w')
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
 
 -- Terminal
-keymap.set('n', '<leader>t', ':terminal<Return>:resize 10<Return>')
+keymap.set('n', '<leader>t', ':split<Return><C-w>w:terminal<Return>:resize 10<Return>')
 
 -- Move window
 keymap.set('n', '<Space>', '<C-w>w')

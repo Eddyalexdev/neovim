@@ -74,7 +74,7 @@ nvim_lsp.flow.setup {
 
 nvim_lsp.tsserver.setup {
   on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+  filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript" },
   cmd = { "typescript-language-server", "--stdio" },
   capabilities = capabilities
 }
@@ -109,6 +109,32 @@ nvim_lsp.sumneko_lua.setup {
 nvim_lsp.tailwindcss.setup {
   on_attach = on_attach,
   capabilities = capabilities
+}
+
+nvim_lsp.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
+
+nvim_lsp.intelephense.setup {
+  cmd = { "/home/alex/.config/composer/vendor/felixfbecker/language-server", "--stdio" },
+  filetypes = { "php" },
+  settings = {
+    php = {
+      format = {
+        enable = true
+      },
+      suggest = {
+        maxItems = 20
+      }
+    }
+  }
+}
+nvim_lsp.vls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  cmd = { "vue-language-server", "--stdio" },
+  filetypes = { "vue" },
 }
 
 nvim_lsp.cssls.setup {
